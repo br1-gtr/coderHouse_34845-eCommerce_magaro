@@ -1,0 +1,52 @@
+.header{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.header__title-logo-container{
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header__logo{
+    height: 100px;
+}
+.header__title{
+    font-size: 50px;
+}
+.form{
+    height: 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.form__input{
+    width: 400px;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 20px;
+    color: white;
+    background-color: black;
+}
+.form__btn{
+    background-color: white;
+    width: 35px;
+    height: 40px;
+    border-radius: 0 15px 15px 0;
+    cursor: pointer;
+}
+.header__banner p{
+    background: rgb(40,22,77);
+    background: linear-gradient(90deg, rgba(40,22,77,1) 25%, rgba(198,84,221,1) 100%);
+    color: white;
+    width: 250px;
+    padding: 10px 20px;
+    /*border: 1px solid black;*/
+    border-radius: 20px;
+}

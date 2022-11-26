@@ -1,10 +1,10 @@
 .nav{
-    height: 100px;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #5be677;
+    /*background-color: #5be677;*/
 }
 .nav__items{
     width: 70vw;
