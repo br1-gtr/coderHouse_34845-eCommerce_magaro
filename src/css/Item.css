@@ -1,0 +1,77 @@
+@import './VarColor.css';
+.item{
+    padding: 10px;
+    background-color: white;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/*Imagenes*/
+.item__img-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item__img{
+    width: 100%;
+}
+.imgB{
+    transition: 0.3s;
+    position: absolute;
+}
+.imgB:hover{
+    opacity: 0%;
+}
+/*OFF*/
+.item__price-off{
+    position: absolute;
+    top: 1px;
+    /*bottom: 3px;*/
+    right: 0;
+    font-size: 15px;
+    font-weight: bolder;
+    padding: 2px 5px;
+    border: 1px solid var(--main-bg-color03);
+    border-radius: 5px;
+    color: white;
+    background: rgb(40,22,77);
+    background: linear-gradient(90deg, rgba(40,22,77,1) 25%, rgba(198,84,221,1) 100%);
+}
+/*Info*/
+.item__info p{
+    margin: 5px 0;
+}
+.item__info--title{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+.item__info--price{
+    font-weight: bolder;
+}
+.item__info--stock{
+    font-weight: bolder;
+    color: rgb(57, 12, 162);
+}
+/*Btn*/
+.item__btn{
+    background-color: rgb(21, 21, 21);
+    color: white;
+    font-size: 15px;
+    font-weight: bolder;
+    width: 160px;
+    height: 35px;
+    border: 1px solid var(--main-bg-color03);
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: 0.15s;
+}
+.item__btn:hover{
+    background-color: var(--main-bg-color02);
+}
