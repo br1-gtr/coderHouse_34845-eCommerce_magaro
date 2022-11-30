@@ -1,6 +1,12 @@
 @import './VarColor.css';
 .products-container{
+    width: 80%;
     height: 100vh;
     /*background-color: var(--main-bg-color00);*/
     padding: 5px 10%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: center;
 }
