@@ -5,7 +5,7 @@ import { FiPlusCircle } from 'react-icons/fi';
 import { FiMinusCircle } from 'react-icons/fi';
 import { FaCartPlus } from 'react-icons/fa';
 
-export function Item({ imgA, imgB, name, description, price, off, stock }) {
+export function Item( {imgA, imgB, name, description, price, stock, off} ) {
 
     const [contProduct, setContProduct] = useState(1);
 

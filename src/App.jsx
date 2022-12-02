@@ -9,22 +9,20 @@ function App() {
 
   const [searchTxt, setSearchTxt] = useState(''); //Estados para buscardor, pasa a Header - FormSearch
 
-  const productsFilter = products.filter(product =>  //filter para render de productos segun FILTRO
-                                                    product.description.maker.toLowerCase().includes(searchTxt.toLowerCase()) ||
-                                                    product.description.processor.toLowerCase().includes(searchTxt.toLowerCase()) ||
-                                                    product.description.ram.toLowerCase().includes(searchTxt.toLowerCase()) ||
-                                                    product.description.memory.toLowerCase().includes(searchTxt.toLowerCase()) ||
-                                                    product.description.gi.toLowerCase().includes(searchTxt.toLowerCase()) ||
-                                                    product.description.so.toLowerCase().includes(searchTxt.toLowerCase())
-                                                );
-    //console.log(productsFilter);
-    //console.log(typeof (searchTxt));
-
+  const productListFilter = products.filter(product =>  //filter para render de productos segun FILTRO
+                                    product.description.maker.toLowerCase().includes(searchTxt.toLowerCase()) ||
+                                    product.description.processor.toLowerCase().includes(searchTxt.toLowerCase()) ||
+                                    product.description.ram.toLowerCase().includes(searchTxt.toLowerCase()) ||
+                                    product.description.memory.toLowerCase().includes(searchTxt.toLowerCase()) ||
+                                    product.description.gi.toLowerCase().includes(searchTxt.toLowerCase()) ||
+                                    product.description.so.toLowerCase().includes(searchTxt.toLowerCase())
+                                );
+                                
   return (
     <div className="App">
-      <Header searchTxt={searchTxt} setSearchTxt={setSearchTxt}/>
+      <Header searchTxt={searchTxt} setSearchTxt={setSearchTxt} />
       <NavBar />
-      <ItemListContainer products={productsFilter}/> 
+      <ItemListContainer products={productListFilter} /> 
     </div>
   );
 }
