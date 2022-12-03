@@ -45,6 +45,24 @@
     box-sizing: border-box;
     border-radius: 0 15px 15px 0;
 }
+/*RRSS*/
+.header__rrss{
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+.header__rrss .rrss-icon{
+    padding: 0 15px;
+}
+
+.header__rrss .rrss-icon:hover{
+    color: rgba(0, 0, 0, 0.348);
+}
+
+.header__rrss .rrss-icon:nth-child(2){
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
 
 @media screen and (max-width: 1024px) {
     .header__logo{
@@ -68,10 +86,14 @@
 }
 @media screen and (max-width: 767px) {
     .header{
+        height: 180px;
         margin: 5px 0;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
     }  
+    .header__rrss .rrss-icon{
+        margin-top: 10px;
+    }
 
 }
