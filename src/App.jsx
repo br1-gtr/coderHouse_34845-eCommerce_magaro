@@ -11,9 +11,10 @@ function App() {
 
   useEffect(()=>{
     console.log('Cargando productos');
-    fetch("productsList.json")
-    .then(ress => ress.json())
-    .then(data => console.log(data))
+
+    fetch("./productsList.json")
+      .then(ress => ress.json())
+      .then(data => console.log(data))
     
   },[])
 
