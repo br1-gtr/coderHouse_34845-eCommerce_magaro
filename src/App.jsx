@@ -4,10 +4,18 @@ import { Header } from './components/Header';
 import { NavBar } from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
 import { products } from "./products.js";
-
+import { useEffect } from 'react';
 function App() {
 
   const [searchTxt, setSearchTxt] = useState(''); //Estados para buscardor, pasa a Header - FormSearch
+
+  useEffect(()=>{
+    console.log('Cargando productos');
+    fetch("productsList.json")
+    .then(ress => ress.json())
+    .then(data => console.log(data))
+    
+  },[])
 
   const productListFilter = products.filter(product =>  //filter para render de productos segun FILTRO
                                     product.description.maker.toLowerCase().includes(searchTxt.toLowerCase()) ||

@@ -1,4 +1,4 @@
-import img0A from './assets/img/0a.jpg';
+/*import img0A from './assets/img/0a.jpg';
 import img0B from './assets/img/0b.jpg';
 import img1A from './assets/img/1a.jpg';
 import img1B from './assets/img/1b.jpg';
@@ -12,6 +12,22 @@ import img5A from './assets/img/5a.jpg';
 import img5B from './assets/img/5b.jpg';
 import img6A from './assets/img/6a.png';
 import img6B from './assets/img/6b.jpg';
+
+https://i.ibb.co/Kwgfxy6/0a.jpg
+https://i.ibb.co/zFg1rnR/0b.jpg
+https://i.ibb.co/SXy7T8v/1a.jpg
+https://i.ibb.co/5jwVf0q/1b.jpg
+https://i.ibb.co/6bgsS3X/2a.jpg
+https://i.ibb.co/jZ41Qhc/2b.jpg
+https://i.ibb.co/cQGnC8Q/3a.jpg
+https://i.ibb.co/J5GZ82f/3b.jpg
+https://i.ibb.co/mhsXw6v/4a.jpg
+https://i.ibb.co/FqCbWPn/4b.jpg
+https://i.ibb.co/GWmKB80/5a.jpg
+https://i.ibb.co/VY2kM7c/5b.jpg
+https://i.ibb.co/qk8v2dF/6a.png
+https://i.ibb.co/Bwt6BDX/6b.jpg
+*/
 
 
 export const products = [
@@ -29,8 +45,8 @@ export const products = [
         price: 425000,
         off: 15,
         stock: true,
-        imgA: img0A,
-        imgB: img0B
+        imgA: 'https://i.ibb.co/Kwgfxy6/0a.jpg',
+        imgB: 'https://i.ibb.co/zFg1rnR/0b.jpg'
     },
     {   
         id: 1,
@@ -46,8 +62,8 @@ export const products = [
         price: 258000,
         off: 10,
         stock: false,
-        imgA: img1A,
-        imgB: img1B
+        imgA: 'https://i.ibb.co/SXy7T8v/1a.jpg',
+        imgB: 'https://i.ibb.co/5jwVf0q/1b.jpg'
     },
     {   
         id: 2,
@@ -63,8 +79,8 @@ export const products = [
         price: 458800,
         off: 10,
         stock: true,
-        imgA: img2A,
-        imgB: img2B
+        imgA: 'https://i.ibb.co/6bgsS3X/2a.jpg',
+        imgB: 'https://i.ibb.co/jZ41Qhc/2b.jpg'
     },
     {   
         id: 3,
@@ -80,8 +96,8 @@ export const products = [
         price: 481000,
         off: 20,
         stock: false,
-        imgA: img3A,
-        imgB: img3B
+        imgA: 'https://i.ibb.co/cQGnC8Q/3a.jpg',
+        imgB: 'https://i.ibb.co/cQGnC8Q/3b.jpg'
     },
     {   
         id: 4,
@@ -97,8 +113,8 @@ export const products = [
         price: 127000,
         off: 5,
         stock: true,
-        imgA: img4A,
-        imgB: img4B
+        imgA: 'https://i.ibb.co/mhsXw6v/4a.jpg',
+        imgB: 'https://i.ibb.co/FqCbWPn/4b.jpg'
     },
     {   
         id: 5,
@@ -114,8 +130,8 @@ export const products = [
         price: 267800,
         off: 10,
         stock: true,
-        imgA: img5A,
-        imgB: img5B
+        imgA: 'https://i.ibb.co/GWmKB80/5a.jpg',
+        imgB: 'https://i.ibb.co/VY2kM7c/5b.jpg'
     },
     {   
         id: 6,
@@ -131,8 +147,8 @@ export const products = [
         price: 379440,
         off: 15,
         stock: false,
-        imgA: img6A,
-        imgB: img6B
+        imgA: 'https://i.ibb.co/qk8v2dF/6a.png',
+        imgB: 'https://i.ibb.co/Bwt6BDX/6b.jpg'
     }
 ];
 //console.log(products[3].description.processor.includes('')); true

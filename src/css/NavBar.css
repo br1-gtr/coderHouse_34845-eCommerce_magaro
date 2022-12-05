@@ -28,8 +28,6 @@
     cursor: pointer;
 }
 
-
-
 .nav__items div:nth-child(2){
     border-left: 3px solid rgba(0, 0, 0, 0.264);
     border-right: 3px solid rgba(0, 0, 0, 0.264);
@@ -40,8 +38,9 @@
 
 .nav__items div::after{
     content: "";
-    height: 4px;
+    height: 5px;
     width: 0%;
+    border-radius: 12px;
     background: rgb(40,22,77);
     background: linear-gradient(90deg, rgba(40,22,77,1) 25%, rgba(198,84,221,1) 100%);
     position: absolute;
