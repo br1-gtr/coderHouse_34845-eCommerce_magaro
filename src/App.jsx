@@ -3,19 +3,28 @@ import { useState } from 'react';
 import { Header } from './components/Header';
 import { NavBar } from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
-import { products } from "./products.js";
+//import { products } from "./products.js";
 import { useEffect } from 'react';
 function App() {
 
   const [searchTxt, setSearchTxt] = useState(''); //Estados para buscardor, pasa a Header - FormSearch
+  const [products, setProducts] = useState([])
+  const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(()=>{
-    console.log('Cargando productos');
 
+  const fetchData = () => {
     fetch("./productsList.json")
-      .then(ress => ress.json())
-      .then(data => console.log(data))
-    
+      .then( res => res.json() )
+      .then( data => {
+        setProducts(data)
+        setTimeout(()=>{
+          setIsLoading(true)
+        },3000)
+      })
+  }
+
+  useEffect( ()=>{ //llamada al json con info de productos, setTimeOut para loading
+    fetchData()
   },[])
 
   const productListFilter = products.filter(product =>  //filter para render de productos segun FILTRO
@@ -26,12 +35,16 @@ function App() {
                                     product.description.gi.toLowerCase().includes(searchTxt.toLowerCase()) ||
                                     product.description.so.toLowerCase().includes(searchTxt.toLowerCase())
                                 );
-                                
+                       
   return (
     <div className="App">
       <Header searchTxt={searchTxt} setSearchTxt={setSearchTxt} />
       <NavBar />
-      <ItemListContainer products={productListFilter} /> 
+      {
+        (isLoading) 
+        ? <ItemListContainer products={productListFilter} /> 
+        : <h1>Cargando...</h1>
+      }
     </div>
   );
 }

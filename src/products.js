@@ -97,7 +97,7 @@ export const products = [
         off: 20,
         stock: false,
         imgA: 'https://i.ibb.co/cQGnC8Q/3a.jpg',
-        imgB: 'https://i.ibb.co/cQGnC8Q/3b.jpg'
+        imgB: 'https://i.ibb.co/J5GZ82f/3b.jpg'
     },
     {   
         id: 4,
