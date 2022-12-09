@@ -1,8 +1,12 @@
 import './App.css';
+
 import { useState } from 'react';
 import { Header } from './components/Header';
 import { NavBar } from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
+import { Loader } from './components/Loader';
+
+
 //import { products } from "./products.js";
 import { useEffect } from 'react';
 function App() {
@@ -43,7 +47,7 @@ function App() {
       {
         (isLoading) 
         ? <ItemListContainer products={productListFilter} /> 
-        : <h1>Cargando...</h1>
+        : <Loader />
       }
     </div>
   );
