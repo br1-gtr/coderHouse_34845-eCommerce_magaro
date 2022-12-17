@@ -4,14 +4,16 @@ import { FormSearch } from "./FormSearch";
 import '../css/Header-Form.css';
 import { SlSocialInstagram, SlSocialTwitter } from 'react-icons/sl';
 import { FaWhatsapp } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 export function Header({ searchTxt, setSearchTxt } ) {
     return(
         <header className='header'>
-            <div className="header__title-logo-container">
-                <img src={imgLogo} alt='logo' className='header__logo'/>
-                <h1 className='header__title'>Tecnolandia</h1>
-            </div>
+            <Link to="/">
+                <div className="header__title-logo-container">
+                    <img src={imgLogo} alt='logo' className='header__logo'/>
+                    <h1 className='header__title'>Tecnolandia</h1>
+                </div>
+            </Link>
             <FormSearch className='header__form' searchTxt={searchTxt} setSearchTxt={setSearchTxt} />
             <div className='header__rrss' >
                 <SlSocialInstagram size={'20px'} className='rrss-icon' />

@@ -54,6 +54,32 @@
     width: 60%;
 }
 
+/*CATEGORIAS*/
+.nav__categ-items{
+    display: none;
+    position: absolute;
+
+}
+.nav__categ-items li{
+    padding: 8px;
+    border-radius: 15px;
+    list-style: none;
+    margin: 0 8px;
+}
+.nav__categ-items--gamer{
+    background-color: rgba(165, 42, 42, 0.852);
+    color: white;
+}
+.nav__categ-items--ofice{
+    background-color: rgb(42, 73, 165);
+    color: white;
+}
+
+.nav__categ:hover .nav__categ-items{
+    display: flex;
+    background-color: rgb(255, 255, 255);
+}
+
 @media screen and (max-width: 767px) {
     .nav__items div{
         font-size: 16px;

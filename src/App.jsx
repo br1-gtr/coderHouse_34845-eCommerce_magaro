@@ -5,7 +5,7 @@ import { Header } from './components/Header';
 import { NavBar } from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
 import { Loader } from './components/Loader';
-
+import { Routes, Route } from 'react-router-dom';
 
 //import { products } from "./products.js";
 import { useEffect } from 'react';
@@ -46,7 +46,12 @@ function App() {
       <NavBar />
       {
         (isLoading) 
-        ? <ItemListContainer products={productListFilter} /> 
+        ? (<Routes>
+            <Route path="/" element={<ItemListContainer products={productListFilter} category={undefined}/>}/>
+            <Route path="/category/ofice" element={<ItemListContainer products={productListFilter} category={false}/>}/>
+            <Route path="/category/gamer" element={<ItemListContainer products={productListFilter} category={true}/>}/>
+          </Routes>
+          )
         : <Loader />
       }
     </div>
