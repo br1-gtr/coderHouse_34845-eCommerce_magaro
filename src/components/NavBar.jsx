@@ -12,12 +12,12 @@ export function NavBar(){
                         <div>Categorias</div>
                         <ul className='nav__categ-items'>
                             <Link to="/category/gamer">
-                                <li className='nav__categ-items--gamer'>
+                                <li>
                                     Gamer
                                 </li>
                             </Link>
                             <Link to="/category/ofice">
-                                <li className='nav__categ-items--ofice'>
+                                <li>
                                     Oficina
                                 </li>
                             </Link>
