@@ -5,12 +5,12 @@ import '../css/Header-Form.css';
 import { SlSocialInstagram, SlSocialTwitter } from 'react-icons/sl';
 import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-export function Header({ searchTxt, setSearchTxt } ) {
-    return(
+export function Header({ searchTxt, setSearchTxt }) {
+    return (
         <header className='header'>
-            <Link to="/">
+            <Link to="/" className='link-styles'>
                 <div className="header__title-logo-container">
-                    <img src={imgLogo} alt='logo' className='header__logo'/>
+                    <img src={imgLogo} alt='logo' className='header__logo' />
                     <h1 className='header__title'>Tecnolandia</h1>
                 </div>
             </Link>

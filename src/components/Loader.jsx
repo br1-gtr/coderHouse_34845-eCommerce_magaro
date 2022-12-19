@@ -4,7 +4,7 @@ import React from "react";
 import '../css/Loader.css';
 
 export function Loader() {
-    return(
+    return (
         <div className='cont-loader'>
             <div className='spinner'></div>
             <div className='spinner-child'></div>

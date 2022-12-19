@@ -1,4 +1,4 @@
-.nav{
+.nav {
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -6,16 +6,18 @@
     align-items: center;
     /*background-color: #5be677;*/
 }
-.nav__items{
+
+.nav__items {
     width: 80vw;
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-end;
 }
-.nav__items div{
-    width: 25%;
+
+.nav__items div {
+    width: 100%;
     height: 35px;
     text-align: center;
     padding: 5px;
@@ -28,34 +30,28 @@
     position: relative;
     transition: all 0.2s;
     cursor: pointer;
+    border-right: 3px solid rgba(0, 0, 0, 0.264) !important;
 }
 
-.nav__items div:nth-child(2){
-    border-left: 3px solid rgba(0, 0, 0, 0.264);
-    border-right: 3px solid rgba(0, 0, 0, 0.264);
-  }
-.nav__items div:nth-child(3){
-    border-right: 3px solid rgba(0, 0, 0, 0.264);
-}
 
-.nav__items div::after{
+.nav__items div::after {
     content: "";
     height: 5px;
-    width: 0%;
     border-radius: 12px;
-    background: rgb(40,22,77);
-    background: linear-gradient(90deg, rgba(40,22,77,1) 25%, rgba(198,84,221,1) 100%);
+    background: rgb(40, 22, 77);
+    background: linear-gradient(90deg, rgba(40, 22, 77, 1) 25%, rgba(198, 84, 221, 1) 100%);
     position: absolute;
     bottom: 0;
     transition: 0.3s;
+    width: 0%;
 }
 
-.nav__items div:hover::after{
+.nav__items div:hover::after {
     width: 60%;
 }
 
 /*CATEGORIAS*/
-.nav__categ-items{
+.nav__categ-items {
     visibility: hidden;
     position: absolute;
     width: 0%;
@@ -65,24 +61,27 @@
     top: 45px;
     left: -11px;
     z-index: 10;
-    background-color: rgb(255, 255, 255);
+
 }
-.nav__categ-items li{
+
+.nav__categ-items li {
     padding: 8px;
     list-style: none;
     margin: 0 8px;
-    border-left: 3px solid rgba(0, 0, 0, 0.264);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.264);
-    background-color: rgba(0, 0, 0, 0.111);
+    border-left: 3px solid rgba(255, 255, 255, 0.264);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.264);
+    background-color: rgba(0, 0, 0, 0.95);
+    color: white;
     border-radius: 0 10px 10px 0;
 }
-.nav__categ:hover .nav__categ-items{
+
+.nav__categ:hover .nav__categ-items {
     visibility: visible;
     width: 90%;
 }
 
 @media screen and (max-width: 767px) {
-    .nav__items div{
+    .nav__items div {
         font-size: 16px;
     }
 

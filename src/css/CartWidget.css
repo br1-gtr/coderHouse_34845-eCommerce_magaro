@@ -1,4 +1,4 @@
-.cart-widget{
+.cart-widget {
     width: 60px;
     height: 100%;
     /*border: 1px solid black;*/
@@ -7,11 +7,13 @@
     flex-direction: column;
     justify-content: flex-end;
     cursor: pointer;
+    list-style: none !important;
 }
-.cart-widget .count-product{
+
+.cart-widget .count-product {
     width: 25px;
     height: 25px;
-    background-color: rgb(246, 63, 30,0.7);
+    background-color: rgb(246, 63, 30, 0.7);
     color: white;
     border: 2px solid rgb(3, 3, 3);
     border-radius: 50%;
