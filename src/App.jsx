@@ -6,6 +6,7 @@ import { NavBar } from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
 import { Loader } from './components/Loader';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { Footer } from './components/Footer';
 
 //import { products } from "./products.js";
 import { useEffect } from 'react';
@@ -60,6 +61,7 @@ function App() {
             </Routes>
           ) : <Loader />
       }
+      <Footer />
     </div>
   );
 }

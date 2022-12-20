@@ -4,6 +4,12 @@
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
+.App {
+  position: relative;
+  height: auto;
+  width: 100vw;
+}
+
 .link-styles {
   text-decoration: none;
   color: black;

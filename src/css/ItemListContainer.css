@@ -1,7 +1,9 @@
 @import './VarColor.css';
-.products-container{
-    width: 80%;
-    height: 100vh;
+
+.products-container {
+    box-sizing: border-box;
+    width: 90%;
+    height: auto;
     margin: auto;
     /*background-color: var(--main-bg-color00);*/
     padding: 5px 10%;
@@ -13,21 +15,22 @@
 }
 
 @media screen and (max-width: 1650px) {
-    .products-container{
-        width: 90%;
+    .products-container {
+        width: 100%;
 
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .products-container{
-        width: 95%;
+    .products-container {
+        width: 100%;
 
     }
 }
+
 @media screen and (max-width: 767px) {
-    .products-container{
-        width: 80%;
+    .products-container {
+        width: 100%;
         justify-content: center;
     }
 

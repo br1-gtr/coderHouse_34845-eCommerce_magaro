@@ -14,7 +14,7 @@ export function NavBar() {
                     </Link>
                 </div>
                 <div className='nav__categ'>
-                    <div>Categorias</div>
+                    <span>Categorias</span>
                     <ul className='nav__categ-items'>
                         <Link to="/category/gamer" className='link-styles'>
                             <li>
