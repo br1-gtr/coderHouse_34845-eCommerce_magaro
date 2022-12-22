@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useContext } from "react";
-import { CartContextProvider } from "../context/CartContextProvider";
+import { cartContext } from "../context/CartContextProvider";
 
 import '../css/Item.css';
 import { FiPlusCircle } from 'react-icons/fi';
@@ -23,7 +23,13 @@ export function Item({ id, imgA, imgB, name, description, price, stock, off }) {
         };
     };
 
-    const { addToCart } = useContext(CartContextProvider)
+    const { addToCart, cart } = useContext(cartContext);
+
+    console.log(cart);
+
+    const clickHandler = () => {
+        addToCart(id, name, contProduct);
+    }
 
     return (
 
@@ -48,7 +54,7 @@ export function Item({ id, imgA, imgB, name, description, price, stock, off }) {
                     <p className={stock ? 'item__info--stock' : 'item__info--NOstock'}>{stock ? 'En Stock' : 'Sin Stock'}</p>
                 </div>
             </Link>
-            <button className='item__btn'>
+            <button className='item__btn' onClick={clickHandler}>
                 <FaCartPlus /><p>Agregar al Carrito</p>
             </button>
         </div >

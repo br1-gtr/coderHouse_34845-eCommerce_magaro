@@ -1,6 +1,6 @@
 import './App.css';
 
-import { useState, useEffect, createContext } from 'react';
+import { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { NavBar } from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
