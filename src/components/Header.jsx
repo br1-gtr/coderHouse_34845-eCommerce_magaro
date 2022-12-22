@@ -5,7 +5,7 @@ import '../css/Header-Form.css';
 import { SlSocialInstagram, SlSocialTwitter } from 'react-icons/sl';
 import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-export function Header({ searchTxt, setSearchTxt }) {
+export function Header() {
     return (
         <header className='header'>
             <Link to="/" className='link-styles'>
@@ -14,7 +14,7 @@ export function Header({ searchTxt, setSearchTxt }) {
                     <h1 className='header__title'>Tecnolandia</h1>
                 </div>
             </Link>
-            <FormSearch className='header__form' searchTxt={searchTxt} setSearchTxt={setSearchTxt} />
+            <FormSearch className='header__form' />
             <div className='header__rrss' >
                 <SlSocialInstagram size={'20px'} className='rrss-icon' />
                 <SlSocialTwitter size={'20px'} className='rrss-icon' />

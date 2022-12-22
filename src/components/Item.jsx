@@ -1,5 +1,7 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContextProvider } from "../context/CartContextProvider";
+
 import '../css/Item.css';
 import { FiPlusCircle } from 'react-icons/fi';
 import { FiMinusCircle } from 'react-icons/fi';
@@ -20,6 +22,8 @@ export function Item({ id, imgA, imgB, name, description, price, stock, off }) {
             setContProduct(contProduct - 1);
         };
     };
+
+    const { addToCart } = useContext(CartContextProvider)
 
     return (
 
@@ -47,7 +51,7 @@ export function Item({ id, imgA, imgB, name, description, price, stock, off }) {
             <button className='item__btn'>
                 <FaCartPlus /><p>Agregar al Carrito</p>
             </button>
-        </div>
+        </div >
 
     );
 };

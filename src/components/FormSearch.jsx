@@ -1,11 +1,13 @@
 import React from "react";
+import { useContext } from "react";
 import { FaSearch } from 'react-icons/fa';
+import TxtSearchContext from "../context/TxtSearchContext.js";
 import '../css/Header-Form.css';
-export function FormSearch({ searchTxt, setSearchTxt }) {
+export function FormSearch() {
+    const { searchTxt, setSearchTxt } = useContext(TxtSearchContext);
 
     const handleChange = evt => {
         setSearchTxt(evt.target.value);
-
     }
 
     return (

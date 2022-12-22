@@ -1,16 +1,17 @@
 import './App.css';
 
-import { useState } from 'react';
+import { useState, useEffect, createContext } from 'react';
 import { Header } from './components/Header';
 import { NavBar } from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
 import { Loader } from './components/Loader';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Footer } from './components/Footer';
-
 //import { products } from "./products.js";
-import { useEffect } from 'react';
 import { ItemDetailContainer } from './components/ItemDetailContainer';
+import TxtSearchContext from './context/TxtSearchContext.js';
+import { CartContextProvider } from './context/CartContextProvider.jsx';
+
 function App() {
 
   const [searchTxt, setSearchTxt] = useState(''); //Estados para buscardor, pasa a Header - FormSearch
@@ -44,23 +45,27 @@ function App() {
 
   return (
     <div className="App">
-      <Header searchTxt={searchTxt} setSearchTxt={setSearchTxt} />
-      <NavBar />
-      {
-        (isLoading)
-          ? (
-            <Routes>
-              <Route path="/" element={<ItemListContainer products={productListFilter} category={undefined} />} />
-              <Route path="/category/ofice" element={<ItemListContainer products={productListFilter} category={false} />} />
-              <Route path="/category/gamer" element={<ItemListContainer products={productListFilter} category={true} />} />
-              <Route path="*" element={<Navigate to="/" />} />
-              <Route path="/item/:id" element={<ItemDetailContainer data={productListFilter} />} />
-              <Route path="/category/ofice/item/:id" element={<ItemDetailContainer data={productListFilter} />} />
-              <Route path="/category/gamer/item/:id" element={<ItemDetailContainer data={productListFilter} />} />
-              <Route path="/carrito" element={<p>Carrito vacio...</p>} />
-            </Routes>
-          ) : <Loader />
-      }
+      <TxtSearchContext.Provider value={{ searchTxt, setSearchTxt }}>
+        <Header />
+      </TxtSearchContext.Provider>
+      <CartContextProvider>
+        <NavBar />
+        {
+          (isLoading)
+            ? (
+              <Routes>
+                <Route path="/" element={<ItemListContainer products={productListFilter} category={undefined} />} />
+                <Route path="/category/ofice" element={<ItemListContainer products={productListFilter} category={false} />} />
+                <Route path="/category/gamer" element={<ItemListContainer products={productListFilter} category={true} />} />
+                <Route path="*" element={<Navigate to="/" />} />
+                <Route path="/item/:id" element={<ItemDetailContainer data={productListFilter} />} />
+                <Route path="/category/ofice/item/:id" element={<ItemDetailContainer data={productListFilter} />} />
+                <Route path="/category/gamer/item/:id" element={<ItemDetailContainer data={productListFilter} />} />
+                <Route path="/carrito" element={<p>Carrito vacio...</p>} />
+              </Routes>
+            ) : <Loader />
+        }
+      </CartContextProvider>
       <Footer />
     </div>
   );
