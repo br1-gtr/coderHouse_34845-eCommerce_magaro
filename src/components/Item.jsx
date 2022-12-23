@@ -25,8 +25,6 @@ export function Item({ id, imgA, imgB, name, description, price, stock, off }) {
 
     const { addToCart, cart } = useContext(cartContext);
 
-    console.log(cart);
-
     const clickHandler = () => {
         addToCart(id, name, contProduct);
     }
@@ -34,7 +32,7 @@ export function Item({ id, imgA, imgB, name, description, price, stock, off }) {
     return (
 
         <div className='item'>
-
+            {console.log(cart)}
             <div className='item__img-container'>
                 <img src={imgA} alt="foto producto" className='item__img imgA' />
                 <img src={imgB} alt="foto producto" className='item__img imgB' />

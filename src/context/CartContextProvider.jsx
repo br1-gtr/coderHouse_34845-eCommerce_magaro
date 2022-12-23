@@ -14,7 +14,7 @@ export function CartContextProvider({ defaultValue = [], children }) {
 
             for (const product of copyCart) {
                 if (product.id == id) {
-                    product.quantify = product.quantify + quantify;
+                    product.quantify += quantify;
                 }
             }
             setCart(copyCart) //sobreescribe cart con copia luego de sumar quantify
@@ -28,7 +28,6 @@ export function CartContextProvider({ defaultValue = [], children }) {
                 }
             ])
         }
-
     };
 
     const isInCart = id => {

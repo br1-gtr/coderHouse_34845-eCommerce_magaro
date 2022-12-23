@@ -31,7 +31,7 @@ export function NavBar() {
                 <div>Contacto</div>
             </div>
             <Link to="/carrito" className='link-styles'>
-                <CartWidget countProduct={9} />
+                <CartWidget />
             </Link>
         </div>
     );
