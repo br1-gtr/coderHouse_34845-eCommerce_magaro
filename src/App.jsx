@@ -18,7 +18,6 @@ function App() {
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(false);
 
-
   const fetchData = () => {
     fetch("./productsList.json")
       .then(res => res.json())

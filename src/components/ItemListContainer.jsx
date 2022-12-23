@@ -2,8 +2,8 @@ import React from "react";
 import '../css/ItemListContainer.css';
 import { Item } from "./Item";
 
-
 export function ItemListContainer({ products, category }) {
+
     return (
         <div className='products-container'>
             {

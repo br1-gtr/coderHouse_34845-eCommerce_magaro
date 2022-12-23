@@ -53,32 +53,6 @@
     background: linear-gradient(90deg, rgba(40, 22, 77, 1) 25%, rgba(198, 84, 221, 1) 100%);
 }
 
-/*Cont*/
-.cont {
-    position: absolute;
-    bottom: 40%;
-    color: white;
-    font-size: 28px;
-    width: 37%;
-    padding: 3px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(0, 0, 0, 0.2);
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.cont:hover {
-    background-color: var(--main-bg-color00);
-}
-
-.cont__value {
-    font-size: 30px;
-    margin: 0 10px;
-}
-
-
 /*Info*/
 .item__info p {
     margin: 5px 0;

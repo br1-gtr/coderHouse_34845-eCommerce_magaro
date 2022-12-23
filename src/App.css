@@ -4,10 +4,17 @@
   font-family: 'Montserrat Alternates', sans-serif;
 }
 
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
 .App {
   position: relative;
-  height: auto;
+  min-height: 100vh;
   width: 100vw;
+  padding-bottom: 230px;
+  /*Para bajar FOOTER*/
 }
 
 .link-styles {
