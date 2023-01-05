@@ -4,9 +4,9 @@ import { BtnAddToCart } from "./BtnAddToCart";
 import '../css/ItemDetailContainer.css';
 import { TbTruckDelivery } from 'react-icons/tb';
 export function ItemDetailContainer({ data }) {
-    let { id } = useParams();
+    let { id } = useParams(); //usa parametro  de ruta para identificador
 
-    const item = data.find(item => item.id === parseInt(id))
+    const item = data.find(item => item.id === parseInt(id)) //filtra item por id
 
     const offPrice = () => {
         const price = item.price;

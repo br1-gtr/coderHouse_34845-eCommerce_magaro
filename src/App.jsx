@@ -11,6 +11,9 @@ import { Footer } from './components/Footer';
 import { ItemDetailContainer } from './components/ItemDetailContainer';
 import TxtSearchContext from './context/TxtSearchContext.js';
 import { CartContextProvider } from './context/CartContextProvider.jsx';
+//Imports FireBase
+import { db } from "./db/firebase-config";
+import { collection, getDocs } from "firebase/firestore";
 
 function App() {
 
@@ -18,21 +21,38 @@ function App() {
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(false);
 
-  const fetchData = () => {
-    fetch("./productsList.json")
-      .then(res => res.json())
-      .then(data => {
-        setProducts(data)
-        setTimeout(() => {
-          setIsLoading(true)
-        }, 3000)
-      })
-  }
+  //FIREBASE
+  //collect FS
+  const productsCollectionRef = collection(db, 'products');
 
-  useEffect(() => { //llamada al json con info de productos, setTimeOut para loading
+  const getProducts = async () => {
+    const data = await getDocs(productsCollectionRef);
+    setProducts(data.docs.map(doc => ({ ...doc.data(), id: doc.id })));
+    setIsLoading(true)
+  }
+  useEffect(() => { //get Products con FIREBASE
+    getProducts()
+  }, [])
+  //Fin FireBase
+
+  //get Products con json
+  /*
+const fetchData = () => {
+  fetch("./productsList.json")
+    .then(res => res.json())
+    .then(data => {
+      setProducts(data)
+      setTimeout(() => {
+        setIsLoading(true)
+      }, 3000)
+    })
+}
+
+  useEffect(() => { //llamada al json con info de productos, setTimeOut para loading 
     fetchData()
   }, [])
-
+  fin get Products con json
+*/
   const productListFilter = products.filter(product =>  //filter para render de productos segun FILTRO
     product.description.maker.toLowerCase().includes(searchTxt.toLowerCase()) ||
     product.description.processor.toLowerCase().includes(searchTxt.toLowerCase()) ||
