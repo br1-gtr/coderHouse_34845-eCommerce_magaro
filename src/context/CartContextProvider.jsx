@@ -6,8 +6,9 @@ export const cartContext = createContext({});
 export function CartContextProvider({ defaultValue = [], children }) {
 
     const [cart, setCart] = useState(defaultValue);
+    const [totalCart, setTotalCart] = useState(0);
 
-    const addToCart = (id, name, quantify) => {
+    const addToCart = (id, name, quantify, img, price, off) => {
 
         if (isInCart(id)) { //verifica si existe el producto(id) en el cart
             const copyCart = [...cart]; //copia de cart para modificar y luego sobreescribir el cart original
@@ -25,17 +26,22 @@ export function CartContextProvider({ defaultValue = [], children }) {
                     id,
                     name,
                     quantify,
+                    img,
+                    price,
+                    off
                 }
             ])
         }
+        setTotalCart(totalCart + ((price - (price * off) / 100) * quantify))
     };
+
 
     const isInCart = id => {
         return cart.find(product => product.id === id)
     }
 
     return (
-        <cartContext.Provider value={{ addToCart, cart }}>
+        <cartContext.Provider value={{ addToCart, cart, totalCart }}>
             {children}
         </cartContext.Provider>
     )

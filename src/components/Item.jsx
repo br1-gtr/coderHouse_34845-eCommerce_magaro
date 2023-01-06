@@ -25,7 +25,7 @@ export function Item({ id, imgA, imgB, name, description, price, stock, off }) {
                     <p className={stock ? 'item__info--stock' : 'item__info--NOstock'}>{stock ? 'En Stock' : 'Sin Stock'}</p>
                 </div>
             </Link>
-            <BtnAddToCart id={id} name={name} contProduct={contProduct} />
+            <BtnAddToCart id={id} name={name} contProduct={contProduct} imgA={imgA} price={price} off={off} />
         </div >
 
     );
