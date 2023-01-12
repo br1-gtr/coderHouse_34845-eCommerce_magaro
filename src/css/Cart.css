@@ -1,0 +1,64 @@
+@import './VarColor.css';
+
+.cart__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart__container table {
+    margin-top: 20px;
+    width: 55vw;
+    border-collapse: collapse;
+}
+
+.cart__header {
+    font-weight: bolder;
+    text-align: center;
+    background-color: rgb(13, 13, 13);
+    color: white;
+}
+
+.cart__item td {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.133);
+
+}
+
+.cart__item td {
+    text-align: center;
+}
+
+.cart__item--img {
+    height: 60px;
+}
+
+.cart__item--price {
+    text-decoration: line-through;
+}
+
+.cart__item--off {
+    display: inline;
+    font-weight: bolder;
+    padding: 2px 5px;
+    border: 1px solid var(--main-bg-color03);
+    border-radius: 5px;
+    color: white;
+    background: rgb(40, 22, 77);
+    background: linear-gradient(90deg, rgba(40, 22, 77, 1) 25%, rgba(198, 84, 221, 1) 100%);
+}
+
+.cart__item--final-price {
+    font-weight: bolder;
+}
+
+.cart__item td button {
+    background-color: rgba(216, 26, 26, 0.92);
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

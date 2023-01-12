@@ -1,6 +1,8 @@
 import React from "react";
 import { useContext } from "react";
 import { cartContext } from "../context/CartContextProvider";
+import '../css/Cart.css';
+import { MdDeleteForever } from 'react-icons/md';
 
 export function Cart() {
     const { cart, totalCart, deleteToCart } = useContext(cartContext);
@@ -13,22 +15,34 @@ export function Cart() {
     }
 
     return (
-        <div>
-            {
-                cart.map(item => {
-                    const totalPrice = quantifyProductTotal(offPrice(item.price, item.off), item.quantify)
-                    return <div key={item.id}>
-                        <img src={item.img} alt="" />
-                        <h3>{item.name}</h3>
-                        <p>${item.price}</p>
-                        <p>{item.off}%</p>
-                        <p>$ {offPrice(item.price, item.off)}</p>
-                        <p>Cant: {item.quantify}</p>
-                        <h4>Total: $ {totalPrice}</h4>
-                        <button onClick={() => { deleteToCart(item.id, totalPrice) }}>X</button>
-                    </div>
-                })
-            }
+        <div className='cart__container'>
+            <table>
+                <tr className='cart__header'>
+                    <td>Producto</td>
+                    <td>Precio</td>
+                    <td>Descuento</td>
+                    <td>Ahora</td>
+                    <td>Cant.</td>
+                    <td>Total</td>
+                </tr>
+
+                {
+                    cart.map(item => {
+                        const totalPrice = quantifyProductTotal(offPrice(item.price, item.off), item.quantify)
+                        return <tr key={item.id} className='cart__item'>
+                            <td><img src={item.img} alt="" className='cart__item--img' /></td>
+                            <td className='cart__item--price'>$ {item.price}</td>
+                            <td ><p className='cart__item--off'>{item.off} %</p></td>
+                            <td>$ {offPrice(item.price, item.off)}</td>
+                            <td>{item.quantify}</td>
+                            <td className='cart__item--final-price'>$ {totalPrice}</td>
+                            <td><button onClick={() => { deleteToCart(item.id, totalPrice) }}><MdDeleteForever size={22} /></button></td>
+                        </tr>
+                    })
+                }
+
+
+            </table>
             <h1>TOTAL CARRITO: $ {totalCart}</h1>
         </div>
     )

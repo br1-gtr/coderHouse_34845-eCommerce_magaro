@@ -26,7 +26,7 @@ export function ItemDetailContainer({ data }) {
                     <p><strong>Memoria SSD </strong>{item.description.memory} GB</p>
                     <p><strong>Sistema Operativo: </strong>{item.description.so}</p>
                     <p><strong>Precio: </strong><strike>${item.price}</strike> <strong>${offPrice()}</strong></p>
-                    <BtnAddToCart id={item.id} name={item.name} />
+                    <BtnAddToCart id={item.id} name={item.name} imgA={item.imgA} price={item.price} off={item.off} />
                 </div>
 
             </div>
