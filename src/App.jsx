@@ -1,6 +1,6 @@
 import './App.css';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Header } from './components/Header';
 import { NavBar } from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
@@ -12,7 +12,7 @@ import { Footer } from './components/Footer';
 //import { products } from "./products.js";
 import { ItemDetailContainer } from './components/ItemDetailContainer';
 import TxtSearchContext from './context/TxtSearchContext.js';
-import { CartContextProvider } from './context/CartContextProvider.jsx';
+import { cartContext, CartContextProvider } from './context/CartContextProvider.jsx';
 //Imports FireBase
 import { db } from "./db/firebase-config";
 import { collection, getDocs } from "firebase/firestore";
@@ -23,6 +23,7 @@ function App() {
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(false);
 
+  const { cart } = useContext(cartContext);
   //FIREBASE
   //collect FS
   const productsCollectionRef = collection(db, 'products');
