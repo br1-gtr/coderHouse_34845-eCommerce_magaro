@@ -6,6 +6,7 @@ import { NavBar } from './components/NavBar';
 import { ItemListContainer } from './components/ItemListContainer';
 import { Loader } from './components/Loader';
 import { Cart } from './components/Cart';
+import { BuyCart } from './components/BuyCart';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Footer } from './components/Footer';
 //import { products } from "./products.js";
@@ -81,7 +82,8 @@ const fetchData = () => {
                 <Route path="/item/:id" element={<ItemDetailContainer data={productListFilter} />} />
                 <Route path="/category/ofice/item/:id" element={<ItemDetailContainer data={productListFilter} />} />
                 <Route path="/category/gamer/item/:id" element={<ItemDetailContainer data={productListFilter} />} />
-                <Route path="/carrito" element={<Cart />} />
+                <Route path="/cart" element={<Cart />} />
+                <Route path="/buy-cart" element={<BuyCart />} />
               </Routes>
             ) : <Loader />
         }

@@ -30,7 +30,7 @@ export function NavBar() {
                 </div>
                 <div>Contacto</div>
             </div>
-            <Link to="/carrito" className='link-styles'>
+            <Link to="/cart" className='link-styles'>
                 <CartWidget />
             </Link>
         </div>

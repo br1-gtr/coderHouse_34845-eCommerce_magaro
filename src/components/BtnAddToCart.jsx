@@ -5,13 +5,13 @@ import { FaCartPlus } from 'react-icons/fa';
 
 import '../css/Item.css';
 
-export function BtnAddToCart({ id, name, contProduct = 1, imgA, price, off }) {
+export function BtnAddToCart({ id, name, contProduct = 1, imgA, price, off, stock }) {
 
     const { addToCart, cart } = useContext(cartContext); //context CART
 
     const clickHandler = () => {
-        addToCart(id, name, contProduct, imgA, price, off);
-        console.log('compra!');
+        stock && addToCart(id, name, contProduct, imgA, price, off);
+        //console.log('compra!');
     }
 
     return (
