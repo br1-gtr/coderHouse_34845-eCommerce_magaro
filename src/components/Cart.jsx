@@ -4,19 +4,16 @@ import { cartContext } from "../context/CartContextProvider";
 import '../css/Cart.css';
 import { MdDeleteForever, MdProductionQuantityLimits } from 'react-icons/md';
 import { SiStarship } from 'react-icons/si';
-
 import { Link } from "react-router-dom";
 
 export function Cart() {
     const { cart, totalCart, deleteToCart, buyCart } = useContext(cartContext);
-    //console.log(totalCart);
     const offPrice = (price, off) => {
         return price - ((price * off) / 100)
     }
     const quantifyProductTotal = (price, quantify) => {
         return price * quantify
     }
-
     return (
         (cart.length === 0)
             ? <div className='cart__container'>

@@ -1,20 +1,27 @@
 import React from "react";
 import { CartWidget } from './CartWidget';
 import '../css/NavBar.css';
+import { MdComputer, MdHome, MdEmail } from 'react-icons/md';
 
 import { Link } from 'react-router-dom';
 export function NavBar() {
+    const sizeIcon = 35;
     return (
         <div className='nav'>
             <div className='nav__items'>
-                <div>Inicio</div>
+                <div>
+                    <p className='icon-desk'>Inicio</p>
+                    <MdHome className='icon-mobile' size={sizeIcon} />
+                </div>
+
                 <div>
                     <Link to="/" className='link-styles'>
-                        <span>Productos</span>
+                        <p className='icon-desk'>Productos</p>
+                        <MdComputer className='icon-mobile' size={sizeIcon} />
                     </Link>
                 </div>
                 <div className='nav__categ'>
-                    <span>Categorias</span>
+                    <p className='icon-desk'>Categorias</p>
                     <ul className='nav__categ-items'>
                         <Link to="/category/gamer" className='link-styles'>
                             <li>
@@ -28,11 +35,16 @@ export function NavBar() {
                         </Link>
                     </ul>
                 </div>
-                <div>Contacto</div>
+                <div>
+                    <p className='icon-desk'>Contacto</p>
+                    <MdEmail className='icon-mobile' size={sizeIcon} />
+                </div>
             </div>
-            <Link to="/cart" className='link-styles'>
-                <CartWidget />
-            </Link>
+            <div className='cart-widget'>
+                <Link to="/cart" className='link-styles'>
+                    <CartWidget />
+                </Link>
+            </div>
         </div>
     );
 };

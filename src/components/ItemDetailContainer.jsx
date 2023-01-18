@@ -26,9 +26,8 @@ export function ItemDetailContainer({ data }) {
                     <p><strong>Memoria SSD </strong>{item.description.memory} GB</p>
                     <p><strong>Sistema Operativo: </strong>{item.description.so}</p>
                     <p><strong>Precio: </strong><strike>${item.price}</strike> <strong>${offPrice()}</strong></p>
-                    <BtnAddToCart id={item.id} name={item.name} imgA={item.imgA} price={item.price} off={item.off} />
+                    <BtnAddToCart id={item.id} name={item.name} imgA={item.imgA} price={item.price} off={item.off} stock={item.stock} />
                 </div>
-
             </div>
             <div className='item-detail__delibery'>
                 <TbTruckDelivery size={'25px'} />

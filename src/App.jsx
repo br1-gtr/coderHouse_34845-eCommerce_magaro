@@ -12,7 +12,7 @@ import { Footer } from './components/Footer';
 //import { products } from "./products.js";
 import { ItemDetailContainer } from './components/ItemDetailContainer';
 import TxtSearchContext from './context/TxtSearchContext.js';
-import { cartContext, CartContextProvider } from './context/CartContextProvider.jsx';
+import { CartContextProvider } from './context/CartContextProvider.jsx';
 //Imports FireBase
 import { db } from "./db/firebase-config";
 import { collection, getDocs } from "firebase/firestore";
@@ -22,8 +22,7 @@ function App() {
   const [searchTxt, setSearchTxt] = useState(''); //Estados para buscardor, pasa a Header - FormSearch
   const [products, setProducts] = useState([])
   const [isLoading, setIsLoading] = useState(false);
-
-  const { cart } = useContext(cartContext);
+  console.log(searchTxt);
   //FIREBASE
   //collect FS
   const productsCollectionRef = collection(db, 'products');
@@ -35,6 +34,7 @@ function App() {
   }
   useEffect(() => { //get Products con FIREBASE
     getProducts()
+    //console.log(products[0].description.maker);
   }, [])
   //Fin FireBase
 
@@ -56,13 +56,11 @@ const fetchData = () => {
   }, [])
   fin get Products con json
 */
-  const productListFilter = products.filter(product =>  //filter para render de productos segun FILTRO
-    product.description.maker.toLowerCase().includes(searchTxt.toLowerCase()) ||
-    product.description.processor.toLowerCase().includes(searchTxt.toLowerCase()) ||
-    product.description.ram.toLowerCase().includes(searchTxt.toLowerCase()) ||
-    product.description.memory.toLowerCase().includes(searchTxt.toLowerCase()) ||
-    product.description.gi.toLowerCase().includes(searchTxt.toLowerCase()) ||
-    product.description.so.toLowerCase().includes(searchTxt.toLowerCase())
+
+  //filter para render de productos segun FILTRO
+  const productListFilter = products.filter(product =>
+    Object.values(product.description).toString() //pasa valores de objeto description a array y despues a string para usar en barra de busqueda
+      .toLowerCase().includes(searchTxt.toLowerCase())
   );
 
   return (
