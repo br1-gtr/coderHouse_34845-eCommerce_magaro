@@ -35,7 +35,10 @@
         background-color: rgb(164, 164, 164, 0.1);
         padding: 2px;
         border-radius: 5px;
-        box-shadow: 2px 2px 3px rgba(167, 167, 167, 0.3);
+        border-right: 1px solid rgba(167, 167, 167, 0.3);
+        border-bottom: 1px solid rgba(167, 167, 167, 0.3);
+        /*
+        box-shadow: 2px 2px 3px rgba(167, 167, 167, 0.3);*/
     }
 
     .cart-widget .count-product {

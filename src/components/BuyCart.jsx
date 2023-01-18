@@ -13,7 +13,7 @@ export function BuyCart() {
                     <img src={boxImg} alt="" className='cart-buy__img' />
                 </div>
                 <div>
-                    <h3>Tu producto está en camino <SiStarship size={35} /></h3>
+                    <h3>Producto en camino <SiStarship size={35} /></h3>
                 </div>
             </div>
         </div>
