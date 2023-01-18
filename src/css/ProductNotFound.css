@@ -1,0 +1,41 @@
+@import './VarColor.css';
+
+.pnf__container {
+    min-height: 60vh !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/*CARRITO VACIO*/
+
+.pnf {
+    width: 320px;
+    height: 250px !important;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 767px) {
+
+    .pnf__container {
+        justify-content: center;
+    }
+
+
+    /*CARRITO VACIO MOBILE*/
+    .pnf {
+        width: 260px;
+        height: 100%;
+        font-size: 12px;
+    }
+
+}

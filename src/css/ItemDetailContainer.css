@@ -44,3 +44,21 @@ img {
 .item-detail__delibery p {
     margin: 0 10px;
 }
+
+@media screen and (max-width: 767px) {
+    .item-detail {
+        width: 85vw;
+        flex-direction: column;
+    }
+
+    .img-detail {
+        height: 180px;
+    }
+
+    .item-detail__info {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

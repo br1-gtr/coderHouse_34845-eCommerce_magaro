@@ -1,6 +1,7 @@
 import React from "react";
 import '../css/ItemListContainer.css';
 import { Item } from "./Item";
+import { PRoductNotFound } from "./ProductNotFound.jsx";
 
 export function ItemListContainer({ products, category }) {
 
@@ -21,7 +22,7 @@ export function ItemListContainer({ products, category }) {
                                     {...product}
                                     key={product.id}
                                 />
-                            })) : <h1>No se encontraron productos :(</h1>
+                            })) : <PRoductNotFound />
             }
         </div>
     );

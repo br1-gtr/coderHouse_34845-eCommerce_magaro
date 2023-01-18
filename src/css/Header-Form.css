@@ -105,6 +105,14 @@
         align-items: center;
     }
 
+    .header__logo {
+        height: 80px;
+    }
+
+    .header__title {
+        font-size: 40px;
+    }
+
     .header__rrss {
         display: none;
     }

@@ -18,7 +18,7 @@ export function ItemDetailContainer({ data }) {
         <div className='item-detail'>
             <h2>{item.name}</h2>
             <div className='item-detail__info'>
-                <img src={item.imgA} alt="imagen item" />
+                <img className='img-detail' src={item.imgA} alt="imagen item" />
                 <div className='item-detail__info--features'>
                     <p><strong>Fabricante: </strong>{item.description.maker}</p>
                     <p><strong>Procesador: </strong>{item.description.processor}</p>

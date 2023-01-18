@@ -85,4 +85,9 @@ p {
         margin: 12px;
     }
 
+    .footer__location {
+        border-left: none;
+        border-right: none;
+    }
+
 }

@@ -19,7 +19,7 @@ export function CartWidget() {
     return (
         <div className='cart-widget'>
             <div className="count-product">{/*countProducts*/refreshContProducts()}</div>
-            <FaShoppingCart size={'50px'} className='icon' />
+            <FaShoppingCart size={'40px'} className='icon' />
         </div>
     );
 };
