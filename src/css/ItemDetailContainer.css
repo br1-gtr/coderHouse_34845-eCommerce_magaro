@@ -55,6 +55,10 @@ img {
         height: 180px;
     }
 
+    .item-detail h2 {
+        font-size: 18px;
+    }
+
     .item-detail__info {
         flex-direction: column;
         justify-content: center;
