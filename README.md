@@ -11,7 +11,7 @@ Primero se conecta con el servicio de Firebase donde se alojan un listado de pro
 
 Cada producto cuenta con una **descripción individual** a la que es posible acceder haciendo click en el detalle de cada item.
 
-Adicionalmente cuenta con una** barra de busqueda** en tiempo real totalmente funcional en la parte superiror.
+Adicionalmente cuenta con una **barra de busqueda** en tiempo real totalmente funcional en la parte superiror.
 
 ### Totalmente responsive
 Este proyecto está diseñado tanto para acceder desde un telefono móvil hasta un monitor de desktop. Este desarrollo que se destaca en el navbar principalmente, está basado en css puro sumando media querys sin la adición de ningun framework de estilos.
