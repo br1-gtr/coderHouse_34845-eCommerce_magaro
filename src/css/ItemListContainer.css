@@ -5,6 +5,7 @@
     width: 90%;
     height: auto;
     margin: auto;
+    margin-top: 35px;
     /*background-color: var(--main-bg-color00);*/
     padding: 5px 10%;
     display: flex;
@@ -32,6 +33,7 @@
     .products-container {
         width: 100%;
         justify-content: center;
+        margin-top: 10px;
     }
 
 }
