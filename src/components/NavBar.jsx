@@ -23,9 +23,7 @@ export function NavBar() {
                 <div>
                     <LinkRoute to="/" className='link-styles'>
                         <p className='icon-desk'>Productos</p>
-                        <LinkScroll to='header' spy={true} smooth={true} offset={50} duration={500}>
-                            <MdComputer className='icon-mobile' size={sizeIcon} />
-                        </LinkScroll>
+                        <MdComputer className='icon-mobile' size={sizeIcon} />
                     </LinkRoute>
                 </div>
                 <div className='nav__categ'>
