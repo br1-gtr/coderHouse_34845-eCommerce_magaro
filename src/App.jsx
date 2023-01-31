@@ -25,6 +25,7 @@ function App() {
   console.log(searchTxt);
   //FIREBASE
   //collect FS
+  /*
   const productsCollectionRef = collection(db, 'products');
 
   const getProducts = async () => {
@@ -35,27 +36,27 @@ function App() {
   useEffect(() => { //get Products con FIREBASE
     getProducts()
     //console.log(products[0].description.maker);
-  }, [])
+  }, [])*/
   //Fin FireBase
 
   //get Products con json
-  /*
-const fetchData = () => {
-  fetch("./productsList.json")
-    .then(res => res.json())
-    .then(data => {
-      setProducts(data)
-      setTimeout(() => {
-        setIsLoading(true)
-      }, 3000)
-    })
-}
+
+  const fetchData = () => {
+    fetch("./productsList.json")
+      .then(res => res.json())
+      .then(data => {
+        setProducts(data)
+        setTimeout(() => {
+          setIsLoading(true)
+        }, 3000)
+      })
+  }
 
   useEffect(() => { //llamada al json con info de productos, setTimeOut para loading 
     fetchData()
   }, [])
-  fin get Products con json
-*/
+  // fin get Products con json
+
 
   //filter para render de productos segun FILTRO
   const productListFilter = products.filter(product =>
