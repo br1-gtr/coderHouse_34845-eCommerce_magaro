@@ -3,48 +3,58 @@ import { CartWidget } from './CartWidget';
 import '../css/NavBar.css';
 import { MdComputer, MdHome, MdEmail } from 'react-icons/md';
 
-import { Link } from 'react-router-dom';
+import { Link as LinkRoute } from 'react-router-dom';
+import { Link as LinkScroll } from 'react-scroll';
+
 export function NavBar() {
     const sizeIcon = 35;
     return (
         <div className='nav'>
             <div className='nav__items'>
                 <div>
-                    <p className='icon-desk'>Inicio</p>
-                    <MdHome className='icon-mobile' size={sizeIcon} />
+                    <LinkRoute to="/" className='link-styles'>
+                        <p className='icon-desk'>Inicio</p>
+                        <LinkScroll to='header' spy={true} smooth={true} offset={50} duration={500}>
+                            <MdHome className='icon-mobile' size={sizeIcon} />
+                        </LinkScroll>
+                    </LinkRoute>
                 </div>
 
                 <div>
-                    <Link to="/" className='link-styles'>
+                    <LinkRoute to="/" className='link-styles'>
                         <p className='icon-desk'>Productos</p>
-                        <MdComputer className='icon-mobile' size={sizeIcon} />
-                    </Link>
+                        <LinkScroll to='header' spy={true} smooth={true} offset={50} duration={500}>
+                            <MdComputer className='icon-mobile' size={sizeIcon} />
+                        </LinkScroll>
+                    </LinkRoute>
                 </div>
                 <div className='nav__categ'>
                     <p className='icon-desk'>Categorias</p>
                     <ul className='nav__categ-items'>
-                        <Link to="/category/gamer" className='link-styles'>
+                        <LinkRoute to="/category/gamer" className='link-styles'>
                             <li>
                                 Gamer
                             </li>
-                        </Link>
-                        <Link to="/category/ofice" className='link-styles'>
+                        </LinkRoute>
+                        <LinkRoute to="/category/ofice" className='link-styles'>
                             <li>
                                 Oficina
                             </li>
-                        </Link>
+                        </LinkRoute>
                     </ul>
                 </div>
                 <div>
-                    <p className='icon-desk'>Contacto</p>
-                    <MdEmail className='icon-mobile' size={sizeIcon} />
+                    <LinkScroll to="footer" spy={true} smooth={true} offset={50} duration={500}>
+                        <p className='icon-desk'>Contacto</p>
+                        <MdEmail className='icon-mobile' size={sizeIcon} />
+                    </LinkScroll>
                 </div>
             </div>
             <div className='cart-widget'>
-                <Link to="/cart" className='link-styles'>
+                <LinkRoute to="/cart" className='link-styles'>
                     <CartWidget />
-                </Link>
+                </LinkRoute>
             </div>
-        </div>
+        </div >
     );
 };

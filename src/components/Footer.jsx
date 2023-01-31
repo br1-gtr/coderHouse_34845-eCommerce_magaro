@@ -7,7 +7,7 @@ export function Footer() {
     const sizeIcon = 30;
 
     return (
-        <div className='footer'>
+        <div className='footer' id='footer'>
             <div className='footer__data-container'>
                 <div className='footer__contact'>
                     <h3>CONTACTO</h3>

@@ -7,7 +7,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 export function Header() {
     return (
-        <header className='header'>
+        <header className='header' id='header'>
             <Link to="/" className='link-styles'>
                 <div className="header__title-logo-container">
                     <img src={imgLogo} alt='logo' className='header__logo' />
